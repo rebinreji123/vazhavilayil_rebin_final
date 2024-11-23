@@ -4,7 +4,7 @@
     <style>
       .cls-1 {
         fill: none;
-        stroke: blue;
+        stroke: yellow;
         stroke-linecap: round;
         stroke-miterlimit: 10;
         stroke-width: 8px;
