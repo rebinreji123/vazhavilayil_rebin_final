@@ -1,0 +1,41 @@
+.buy-now {
+
+    background-color: #000;
+    color: #fff;
+    padding: 50px 10%;
+}
+
+.buynow {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content h2 {
+    color: #ffd400;
+    margin-bottom: 20px;
+}
+
+.content p {
+    margin-bottom: 30px;
+}
+
+.buynow-button {
+    padding: 15px 30px;
+    background-color: white;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.buynow-button:hover {
+    background-color: white;
+
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}

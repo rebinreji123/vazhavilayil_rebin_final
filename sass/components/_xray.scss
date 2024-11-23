@@ -1,0 +1,85 @@
+#outerShell {
+    display: none;
+}
+
+#mobile-tablet-view {
+    margin: auto;
+
+    img {
+        width: 40vh;
+    }
+}
+
+.xray {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    font-size: 3vh;
+
+    span {
+        font-size: 3vh;
+        color: blue($color: #000000);
+    }
+}
+
+@media screen and (min-width: 720px) {
+    #mobile-tablet-view {
+
+        img {
+            width: 50vh;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    #mobile-tablet-view {
+        display: none;
+    }
+
+    #outerShell {
+        display: block;
+        max-width: 1200px;
+        margin-top: 40px;
+        border: solid 1px #666;
+        margin: auto;
+    }
+
+    #imageCon {
+        position: relative;
+        max-width: 1200px;
+        height: 85vh;
+    }
+
+    .slideImage {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 85vh;
+    }
+
+    .image-right {
+        background: url(/images/earbuds.png) no-repeat;
+        background-size: cover;
+    }
+
+    .image-left {
+        background: url(/images/earbuds_xray.png) no-repeat;
+        background-size: cover;
+        width: 50%;
+    }
+
+    .image-drag {
+        background-color: lightblue;
+        left: 50%;
+        width: 4px;
+        cursor: pointer;
+    }
+
+}

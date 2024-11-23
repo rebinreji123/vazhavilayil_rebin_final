@@ -1,0 +1,152 @@
+.nav {
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+
+}
+
+.nav-links a {
+    color: #ffd400;
+}
+
+.logo {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 10vh;
+}
+
+.menu-hid {
+    display: none;
+
+    img {
+        width: 100px;
+    }
+}
+
+.nav-links {
+    display: inline-flex;
+
+    li {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        padding: 5px;
+        list-style-type: none;
+        color: #ffd400;
+    }
+}
+
+#hammenu {
+    padding: 10px;
+}
+
+.mobile-menu {
+    padding: 5px;
+    margin: auto;
+
+    li {
+        padding: 5px;
+
+        a {
+            color: #ffd400;
+
+            &:hover {
+                color: #ffd400;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 730px) {
+    #hammenu {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
+    .menu-hid {
+        display: grid;
+    }
+
+    .logo {
+        display: flex;
+        padding: 5px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-links {
+        li {
+            a {
+                color: #ffd400;
+            }
+        }
+    }
+
+    .menu {
+        li {
+            height: 60%;
+            font-size: 18px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+            transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+            color: #fff;
+
+            &:before,
+            &:after {
+                content: "";
+                pointer-events: none;
+                position: absolute;
+            }
+        }
+    }
+
+    .nav-links {
+        li {
+            padding: 10px 20px;
+
+            &:before,
+            &:after {
+                width: 80%;
+                height: 80%;
+                opacity: 1;
+                transition: all 0.3s cubic-bezier(0.075, 0.83, 0.165, 1);
+                border: none;
+                border-radius: 20px;
+            }
+
+            &:hover:before {
+                animation: anim3 500ms ease forwards infinite;
+                border: 1px solid white;
+            }
+
+            &:hover:after {
+                animation: anim3 500ms 150ms ease forwards infinite;
+                border: 1px solid white;
+            }
+        }
+    }
+
+    @keyframes anim3 {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        50% {
+            border-color: white;
+        }
+
+        100% {
+            transform: scale(2);
+            opacity: 0;
+        }
+    }
+}
